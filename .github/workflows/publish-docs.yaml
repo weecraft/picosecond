@@ -25,21 +25,16 @@ jobs:
           bun-version: latest
 
       - name: Install depenendecies
-        working-directory: apps/docs
         run: bun install
 
       - name: Install vercel cli
-        working-directory: apps/docs
         run: bun add --global vercel@latest
 
       - name: Pull vercel environment information
-        working-directory: apps/docs
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Build project artifacts
-        working-directory: apps/docs
         run: NITRO_PRESET=vercel vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy project artifacts to vercel
-        working-directory: apps/docs
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
