@@ -12,7 +12,8 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "Picosecond - Serious making ui components",
+        title:
+          "Picosecond - Serious making ui components for building software",
       },
     ],
     links: [
