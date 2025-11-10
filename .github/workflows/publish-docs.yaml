@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - apps/docs
+      - "apps/docs/**"
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_DOCS_ORG_ID }}
