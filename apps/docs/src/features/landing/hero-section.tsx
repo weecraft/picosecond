@@ -25,7 +25,7 @@ export function HeroSection() {
         rel="noopener"
         target="_blank"
       >
-        Star at github
+        Check our github
       </a>
     </section>
   );
